@@ -463,11 +463,11 @@ h4 {
 }
 
 .main-nav {
-  --main-nav-margin-left: 30px;
-  --main-nav-margin-right: 30px;
+  --main-nav-margin-left: 20px;
+  --main-nav-margin-right: 20px;
   --main-nav-element-gap: 30px;
   --main-nav-links-color: var(--color-grey);
-  --main-nav-links-font-size: var(--font-size-sm);
+  --main-nav-links-font-size: var(--font-size-xsm);
 
   margin-left: var(--main-nav-margin-left);
   margin-right: var(--main-nav-margin-right);

@@ -647,8 +647,8 @@ h4 {
   background-color: var(--card-background-color);
   color: var(--card-color);
   border: var(--card-border);
-  width: 300px; /* Фиксированная ширина */
-  height: 400px; /* Фиксированная высота */
+  width: 450px; /* Фиксированная ширина */
+  height: 450px; /* Фиксированная высота */
 }
 
 .card__header {

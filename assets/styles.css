@@ -449,7 +449,7 @@ h4 {
 }
 
 .main-header {
-  --main-header-padding-block: 60px;
+  --main-header-padding-block: 20px;
   --main-header-logo-color: var(--color-secondary);
   height: 100px;
 
@@ -457,6 +457,7 @@ h4 {
   align-items: center;
   justify-content: space-between;
   padding-block: var(--main-header-padding-block);
+  border-bottom: 2px solid #242424;
 
   .main-header__logo {
     color: var(--main-header-logo-color);
@@ -494,12 +495,12 @@ h4 {
   --hero-content-gap: 40px;
   --hero-content-text-max-width: 88%;
   height: 796px;
-  border: 1px solid var(--color-grey1);
 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative; /* Чтобы позиционировать .hero__end относительно .hero */
 
   .hero__content {
     margin-top: 150px;
@@ -510,13 +511,14 @@ h4 {
   }
 
   .line {
-    background: #242424;
+    background: #1a1a1a;
     border: 1px solid #242424;
     border-radius: 12px;
     padding: 24px 40px;
     color: #98989a;
     width: fit-content;
     margin: 0 auto;
+    margin-bottom: 50px; /* Добавляет отступ вниз */
 
     span {
       display: inline-block;
@@ -532,14 +534,14 @@ h4 {
     display: inline-block;
     font-size: 18px;
     padding: 16px 24px;
-    background-color: var(--color-grey2);
+    background-color: var(--color-black);
     border: 1px solid #242424;
     border-radius: 8px;
-    margin-top: 20px;
+    margin: 0 auto;
   }
 
   .hero__end {
-    background: #242424;
+    background: #1a1a1a;
     border: 1px solid #242424;
     border-radius: 32px;
     padding: 20px 34px;
@@ -547,18 +549,27 @@ h4 {
     width: fit-content;
     margin: 0 auto;
     margin-top: 228px;
+    position: absolute;
+    bottom: -28px; /* Смещаем вниз за пределы .hero */
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   p {
     margin-block: 1;
   }
   .hero__media {
-    background-image: url("../assets/images/hero/hero-img.png"); /* Путь к изображению */
+    background-image: url("../assets/images/fon/Hero section.svg");
     background-size: cover; /* Заполняет область */
-    background-position: center; /* Центрирует изображение */
+    background-position: center; /*Центрирует изображение */
     background-repeat: no-repeat; /* Убирает повторение */
-    height: 448px;
-    width: 1596px;
+    height: 796px;
+
+    &.media-1 {
+      background-image: url("../assets/images/hero/hero-img.png");
+      height: 448px;
+      width: 1596px;
+    }
   }
 }
 @layer components {
@@ -595,7 +606,17 @@ h4 {
       --btn-hover-background-color: var(--color-white, #fff);
       --btn-hover-color: var(--color-black, #000);
       justify-content: center;
-      width: 360px;
+      width: 432px;
+      height: 60px;
+      margin-top: auto;
+    }
+    &.btn--secondary {
+      --btn-base-background-color: var(--color-grey2);
+      --btn-base-text-color: var(--color-white);
+      --btn-hover-background-color: var(--color-white, #fff);
+      --btn-hover-color: var(--color-black, #000);
+      justify-content: center;
+      width: 149px;
       height: 60px;
       margin-top: auto;
     }
@@ -608,7 +629,9 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--heading-block-gap);
+  height: 100%;
 
   .heading-block__title {
     color: var(--color-white);
@@ -617,13 +640,30 @@ h4 {
   .heading-block__description {
     margin: 0;
     color: var(--color-tetriary);
+    &.description-1 {
+      text-align: center;
+    }
+  }
+}
+
+.section__media {
+  background-image: url("../assets/images/fon/Our services.svg");
+  background-size: cover; /* Заполняет область */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Убирает повторение */
+  height: 336px;
+  &.media-2 {
+    background-image: url("../assets/images/fon/Squareup.svg");
+  }
+  &.media-3 {
+    background-image: url("../assets/images/fon/Clients.svg");
   }
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  margin: 0;
 }
 
 .cards-grid {
@@ -642,7 +682,7 @@ h4 {
   --card-color: var(--color-white);
   --card-border: 1px solid var(--color-grey1);
 
-  display: inline-flex;
+  display: flex;
   padding: var(--card-padding);
   background-color: var(--card-background-color);
   color: var(--card-color);
@@ -651,12 +691,13 @@ h4 {
   &.card--primary {
     padding: 80px;
   }
+
+  &.card--secondary {
+    padding-inline: 80px;
+    padding-block: 100px;
+  }
 }
 
-.card__header {
-  display: flex;
-  align-items: center; /* Выравнивает заголовок по высоте с картинкой */
-}
 .card__title {
   flex-direction: column;
   margin-block: 0;
@@ -669,8 +710,20 @@ h4 {
   padding-left: 20px;
   margin-block: 0;
 }
+.card__title--secondary {
+  flex-direction: column;
+  margin-block: 0;
+  font-size: 26px;
+  color: #d8ff99;
+}
 .card__description {
   color: var(--color-tetriary);
+
+  &.description-1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 40px; /* Устанавливает отступ сверху */
+  }
 }
 
 .card__content {
@@ -680,7 +733,31 @@ h4 {
   align-items: flex-start;
 }
 
+.card__content--secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .card__media {
-  width: 5%;
+  width: 60px;
   height: auto;
+}
+
+.card_line {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Выравнивает элементы по центру */
+  gap: 20px;
+  background: #262626;
+  border: 1px solid #242424;
+  border-radius: 12px;
+  padding: 20px 20px;
+  color: #98989a;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.card__link p {
+  margin: 0;
 }

@@ -448,6 +448,11 @@ h4 {
   }
 }
 
+.icon_media {
+  width: 88px;
+  height: 88px;
+}
+
 .main-header {
   --main-header-padding-block: 20px;
   --main-header-logo-color: var(--color-secondary);
@@ -722,6 +727,7 @@ h4 {
   &.description-1 {
     display: flex;
     justify-content: flex-start;
+    text-align: left;
     margin-top: 40px; /* Устанавливает отступ сверху */
   }
 }

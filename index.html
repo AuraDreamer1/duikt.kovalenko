@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="main-header">
-      <a href="#" class="logo main-header__logo">
+      <a href="#" class="main-header__logo">
         <img src="./assets/images/header/logo.svg" alt="SquareUp" />
       </a>
       <nav class="main-nav">
@@ -410,10 +410,121 @@
           </div>
         </div>
       </section>
+      <section class="section Project mr-t-md">
+        <div class="section__media media-4">
+          <div class="heading-block">
+            <a href="#" class="logo">
+              <img src="./assets/images/header/logo2.svg" alt="SquareUp" />
+            </a>
+            <h2 class="heading-block__title">
+              Thank you for your Interest in SquareUp.
+            </h2>
+            <p class="heading-block__description description-1">
+              We would love to hear from you and discuss how we can help bring
+              your digital ideas to life. Here are the different ways<br />
+              you can get in touch with us.
+            </p>
+            <a href="/Start Project" class="btn Project">Start Project</a>
+          </div>
+        </div>
+        <div class="contact-form contact__form">
+          <form class="form">
+            <fieldset class="form-fieldset__vertical">
+              <legend class="sr-only">
+                Please provide name, email and message if you want to contact us
+              </legend>
+              <div class="name-email">
+                <div class="form-input__row">
+                  <label class="label" for="contact-name">Full Name</label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    placeholder="Type here"
+                    name="user-name"
+                  />
+                </div>
+                <div class="form-input__row">
+                  <label class="label" for="contact-email">Email</label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    placeholder="Type here"
+                    name="user-email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="checkbox">
+                <input
+                  type="checkbox"
+                  id="Web Design"
+                  name="Web Design"
+                  value="Web Design"
+                />
+                <label for="Web Design"><span></span>Web Design</label>
+
+                <input
+                  type="checkbox"
+                  id="Collaboration"
+                  name="Collaboration"
+                  value="Collaboration"
+                />
+                <label for="Collaboration"><span></span>Collaboration</label>
+
+                <input
+                  type="checkbox"
+                  id="Mobile App Design"
+                  name="Mobile App Design"
+                  value="Mobile App Designn"
+                />
+                <label for="Mobile App Design"
+                  ><span></span>Mobile App Design</label
+                >
+
+                <input
+                  type="checkbox"
+                  id="Others"
+                  name="Others"
+                  value="Others"
+                />
+                <label for="Others"><span></span>Others</label>
+              </div>
+
+              <div class="slidecontainer">
+                <label class="label" for="Budget">Your Budget</label>
+                <label class="label" for="Budget"
+                  >Slide to indicate your budget range</label
+                >
+                <input
+                  type="range"
+                  min="1"
+                  max="13000"
+                  value="50"
+                  class="slider"
+                  id="myRange"
+                />
+              </div>
+              <div class="form-input__row vertical">
+                <label class="label" for="contact-message">
+                  Your Message
+                </label>
+                <textarea
+                  class="input input--textarea"
+                  name="message"
+                  id="contact-message"
+                  placeholder="Type here"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn Project-1">Submit</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__top">
-        <a href="#" class="logo">
+        <a href="#" class="main-footer__logo">
           <img src="./assets/images/header/logo1.svg" alt="SquareUp" />
         </a>
         <nav class="main-nav main-footer__nav">

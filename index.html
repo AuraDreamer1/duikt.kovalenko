@@ -17,17 +17,29 @@
       <a href="#" class="main-header__logo">
         <img src="./assets/images/header/logo.svg" alt="SquareUp" />
       </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Process</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </nav>
-      <a href="/request-a-quote" class="btn">Contact Us</a>
+      <!-- -->
+      <div class="main-header__menu">
+        <nav class="main-nav main-header__nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <a href="/request-a-quote" class="btn">Contact Us</a>
+        <button class="close-btn">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <button class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
     <main>
       <section class="hero">
@@ -427,7 +439,7 @@
             <a href="/Start Project" class="btn Project">Start Project</a>
           </div>
         </div>
-        <div class="contact-form contact__form">
+        <div class="contact__form">
           <form class="form">
             <fieldset class="form-fieldset__vertical">
               <legend class="sr-only">
@@ -455,55 +467,73 @@
                 </div>
               </div>
               <div class="checkbox">
-                <input
-                  type="checkbox"
-                  id="Web Design"
-                  name="Web Design"
-                  value="Web Design"
-                />
-                <label for="Web Design"><span></span>Web Design</label>
-
-                <input
-                  type="checkbox"
-                  id="Collaboration"
-                  name="Collaboration"
-                  value="Collaboration"
-                />
-                <label for="Collaboration"><span></span>Collaboration</label>
-
-                <input
-                  type="checkbox"
-                  id="Mobile App Design"
-                  name="Mobile App Design"
-                  value="Mobile App Designn"
-                />
-                <label for="Mobile App Design"
-                  ><span></span>Mobile App Design</label
+                <label class="label" for="checkbox"
+                  >Why are you contacting us?</label
                 >
+                <div class="options-container">
+                  <!-- Web Design - Checked -->
+                  <label class="option-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label">Web Design</span>
+                    </div>
+                  </label>
 
-                <input
-                  type="checkbox"
-                  id="Others"
-                  name="Others"
-                  value="Others"
-                />
-                <label for="Others"><span></span>Others</label>
+                  <!-- Collaboration - Unchecked -->
+                  <label class="option-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label">Collaboration</span>
+                    </div>
+                  </label>
+
+                  <!-- Mobile App Design - Unchecked -->
+                  <label class="option-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label">Mobile App Design</span>
+                    </div>
+                  </label>
+
+                  <!-- Others - Unchecked -->
+                  <label class="option-item">
+                    <div class="custom-checkbox">
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                      <span class="label">Others</span>
+                    </div>
+                  </label>
+                </div>
               </div>
 
-              <div class="slidecontainer">
-                <label class="label" for="Budget">Your Budget</label>
-                <label class="label" for="Budget"
-                  >Slide to indicate your budget range</label
-                >
-                <input
-                  type="range"
-                  min="1"
-                  max="13000"
-                  value="50"
-                  class="slider"
-                  id="myRange"
-                />
+              <div class="slider-container">
+                <label class="label" for="slider-container">Your Budget</label>
+                <div class="slider-description">
+                  Slide to indicate your budget range
+                </div>
+
+                <div class="slider-track" id="slider-track">
+                  <div class="slider-progress" id="slider-progress"></div>
+                  <div
+                    class="slider-handle"
+                    id="slider-min-handle"
+                    style="left: 0%"
+                  ></div>
+                  <div
+                    class="slider-handle"
+                    id="slider-max-handle"
+                    style="left: 100%"
+                  ></div>
+                </div>
+                <div class="slider-values">
+                  <div class="slider-value" id="min-value">$1</div>
+                  <div class="slider-value" id="max-value">$15000</div>
+                </div>
               </div>
+
               <div class="form-input__row vertical">
                 <label class="label" for="contact-message">
                   Your Message
@@ -586,4 +616,148 @@
       </div>
     </footer>
   </body>
+  <script>
+    // Optional JavaScript to enhance the user experience
+    document.querySelectorAll(".option-item").forEach((item) => {
+      item.addEventListener("click", function () {
+        const checkbox = this.querySelector('input[type="checkbox"]');
+        checkbox.checked = !checkbox.checked;
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const track = document.getElementById("slider-track");
+      const progress = document.getElementById("slider-progress");
+      const minHandle = document.getElementById("slider-min-handle");
+      const maxHandle = document.getElementById("slider-max-handle");
+      const minValueText = document.getElementById("min-value");
+      const maxValueText = document.getElementById("max-value");
+
+      const minValue = 1;
+      const maxValue = 15000;
+
+      // Initial position of the handles
+      setHandlePosition(minHandle, 0);
+      setHandlePosition(maxHandle, 100);
+      updateProgress();
+      updateValues();
+
+      let activeHandle = null;
+
+      minHandle.addEventListener("mousedown", function (e) {
+        activeHandle = minHandle;
+        document.addEventListener("mousemove", handleDrag);
+        document.addEventListener("mouseup", stopDrag);
+        e.preventDefault();
+      });
+
+      maxHandle.addEventListener("mousedown", function (e) {
+        activeHandle = maxHandle;
+        document.addEventListener("mousemove", handleDrag);
+        document.addEventListener("mouseup", stopDrag);
+        e.preventDefault();
+      });
+
+      // Touch support
+      minHandle.addEventListener("touchstart", function (e) {
+        activeHandle = minHandle;
+        document.addEventListener("touchmove", handleDrag);
+        document.addEventListener("touchend", stopDrag);
+        e.preventDefault();
+      });
+
+      maxHandle.addEventListener("touchstart", function (e) {
+        activeHandle = maxHandle;
+        document.addEventListener("touchmove", handleDrag);
+        document.addEventListener("touchend", stopDrag);
+        e.preventDefault();
+      });
+
+      function handleDrag(e) {
+        if (!activeHandle) return;
+
+        const trackRect = track.getBoundingClientRect();
+        let clientX = e.clientX;
+
+        // Touch support
+        if (e.touches) {
+          clientX = e.touches[0].clientX;
+        }
+
+        let percent = ((clientX - trackRect.left) / trackRect.width) * 100;
+        percent = Math.min(Math.max(percent, 0), 100);
+
+        if (activeHandle === minHandle) {
+          const maxPercent = parseFloat(maxHandle.style.left);
+          percent = Math.min(percent, maxPercent - 1);
+        } else {
+          const minPercent = parseFloat(minHandle.style.left);
+          percent = Math.max(percent, minPercent + 1);
+        }
+
+        setHandlePosition(activeHandle, percent);
+        updateProgress();
+        updateValues();
+      }
+
+      function stopDrag() {
+        activeHandle = null;
+        document.removeEventListener("mousemove", handleDrag);
+        document.removeEventListener("mouseup", stopDrag);
+        document.removeEventListener("touchmove", handleDrag);
+        document.removeEventListener("touchend", stopDrag);
+      }
+
+      function setHandlePosition(handle, percent) {
+        handle.style.left = percent + "%";
+
+        if (handle === minHandle) {
+          minValueText.style.left = percent + "%";
+        } else if (handle === maxHandle) {
+          maxValueText.style.left = percent + "%";
+        }
+      }
+
+      function updateProgress() {
+        const minPercent = parseFloat(minHandle.style.left);
+        const maxPercent = parseFloat(maxHandle.style.left);
+
+        progress.style.left = minPercent + "%";
+        progress.style.width = maxPercent - minPercent + "%";
+      }
+
+      function updateValues() {
+        const minPercent = parseFloat(minHandle.style.left);
+        const maxPercent = parseFloat(maxHandle.style.left);
+
+        const minBudget = Math.round(
+          minValue + (minPercent / 100) * (maxValue - minValue)
+        );
+        const maxBudget = Math.round(
+          minValue + (maxPercent / 100) * (maxValue - minValue)
+        );
+
+        minValueText.textContent = "$" + minBudget;
+        maxValueText.textContent = "$" + maxBudget;
+      }
+    });
+
+    // Header menu logic
+
+    const headerMenu = document.querySelector(".main-header__menu");
+    const headerMenuOpenButton = document.querySelector(".menu-icon");
+    const headerMenuCloseButton = document.querySelector(".close-btn");
+
+    headerMenuOpenButton.addEventListener("click", (e) => {
+      headerMenu.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    headerMenuCloseButton.addEventListener("click", () => {
+      headerMenu.classList.contains("active")
+        ? headerMenu.classList.remove("active")
+        : null;
+      document.body.style.overflow = "auto";
+    });
+  </script>
 </html>

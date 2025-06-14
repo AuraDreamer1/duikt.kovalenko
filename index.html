@@ -35,11 +35,13 @@
           <span></span>
         </button>
       </div>
-      <button class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="icon">
+        <button class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
     <main>
       <section class="hero">
@@ -115,10 +117,12 @@
         <div class="cards-grid">
           <div class="card">
             <div class="card__content">
-              <a href="#" class="icon_media">
-                <img src="./assets/images/Icon/Icon.svg" alt="Icon" />
-              </a>
-              <h3 class="card__title">Design</h3>
+              <div class="icon_title">
+                <a href="#" class="icon_media">
+                  <img src="./assets/images/Icon/Icon.svg" alt="Icon" />
+                </a>
+                <h3 class="card__title">Design</h3>
+              </div>
               <p class="card__description">
                 At Squareup, our design team is passionate about creating
                 stunning, user-centric designs that captivate your audience and
@@ -132,10 +136,12 @@
 
           <div class="card">
             <div class="card__content">
-              <a class="icon_media">
-                <img src="./assets/images/Icon/Icon2.svg" alt="Icon" />
-              </a>
-              <h3 class="card__title">Engineering</h3>
+              <div class="icon_title">
+                <a class="icon_media">
+                  <img src="./assets/images/Icon/Icon2.svg" alt="Icon" />
+                </a>
+                <h3 class="card__title">Engineering</h3>
+              </div>
               <p class="card__description">
                 Our engineering team combines technical expertise with a passion
                 for innovation to build robust and scalable digital solutions.
@@ -148,10 +154,12 @@
           </div>
           <div class="card">
             <div class="card__content">
-              <a class="icon_media">
-                <img src="./assets/images/Icon/Icon3.svg" alt="Icon" />
-              </a>
-              <h3 class="card__title">Project Management</h3>
+              <div class="icon_title">
+                <a class="icon_media">
+                  <img src="./assets/images/Icon/Icon3.svg" alt="Icon" />
+                </a>
+                <h3 class="card__title">Project Management</h3>
+              </div>
               <p class="card__description">
                 Our experienced project management team ensures that your
                 projects are delivered on time, within budget, and according to
@@ -240,10 +248,10 @@
         <div class="section__media media-3">
           <div class="heading-block">
             <h2 class="heading-block__title">What our Clients say About us</h2>
-            <p class="heading-block__description description-1">
+            <p class="heading-block__description">
               At SquareUp, we take pride in delivering exceptional digital
               products and services that drive success for our clients. Here's
-              what<br />some of our satisfied clients have to say about their
+              what some of our satisfied clients have to say about their
               experience working with us
             </p>
           </div>
@@ -422,8 +430,435 @@
           </div>
         </div>
       </section>
-      <section class="section Project mr-t-md">
+      <section class="section faq mr-t-md">
         <div class="section__media media-4">
+          <div class="heading-block">
+            <h2 class="heading-block__title">Frequently Asked Questions</h2>
+            <p class="heading-block__description">
+              Still you have any questions? Contact our Team via
+              hello@squareup.com
+            </p>
+          </div>
+        </div>
+        <div class="faq__grid">
+          <div class="faq-card">
+            <div class="faq-item">
+              <span class="faq-number">01</span>
+
+              <div class="faq-text">
+                <div class="faq__question" data-id="1">
+                  <span class="faq__question--text"
+                    >What services does SquareUp provide?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    SquareUp offers a range of services including design,
+                    engineering, and project management. We specialize in user
+                    experience design, web development, mobile app development,
+                    custom software development, branding and identity, and
+                    more.
+                  </p>
+                </div>
+              </div>
+
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-number">02</span>
+
+              <div class="faq-text">
+                <div class="faq__question" data-id="2">
+                  <span class="faq__question--text"
+                    >How can SquareUp help my business?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    SquareUp offers a suite of tools designed to help businesses
+                    streamline payments, manage inventory, and enhance customer
+                    interactions.
+                  </p>
+                </div>
+              </div>
+
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-number">03</span>
+
+              <div class="faq-text">
+                <div class="faq__question" data-id="3">
+                  <span class="faq__question--text"
+                    >What industries does SquareUp work with?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    SquareUp serves a wide range of industries, helping
+                    businesses streamline payments and operations.
+                  </p>
+                </div>
+              </div>
+
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-number">04</span>
+
+              <div class="faq-text">
+                <div class="faq__question" data-id="4">
+                  <span class="faq__question--text"
+                    >How long does it take to complete a project with
+                    SquareUp?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    The time to complete a project with SquareUp depends on the
+                    type of project and the tools you're using. If you're
+                    managing invoices and contracts through Square Invoices, you
+                    can set up projects with estimated values and completion
+                    phases.
+                  </p>
+                </div>
+              </div>
+
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-item">
+              <span class="faq-number">05</span>
+
+              <div class="faq-text">
+                <div class="faq__question" data-id="5">
+                  <span class="faq__question--text"
+                    >Do you offer ongoing support and maintenance after the
+                    project is completed?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    SquareUp provides ongoing support and maintenance for
+                    businesses using its services. You can access
+                    troubleshooting resources, community forums, and direct
+                    customer support for technical issues.
+                  </p>
+                </div>
+              </div>
+
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-number">06</span>
+
+              <div class="faq-text">
+                <div class="faq__question" data-id="6">
+                  <span class="faq__question--text"
+                    >Can you work with existing design or development
+                    frameworks?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    Yes! SquareUp's Developer Platform provides APIs and SDKs
+                    that integrate with existing design and development
+                    frameworks.
+                  </p>
+                </div>
+              </div>
+
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-number">07</span>
+              <div class="faq-text">
+                <div class="faq__question" data-id="7">
+                  <span class="faq__question--text"
+                    >How involved will I be in the project development
+                    process?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    Your level of involvement in a SquareUp project depends on
+                    how hands-on you want to be. SquareUp offers developer tools
+                    and APIs that allow businesses to integrate payment
+                    processing, inventory management, and customer interactions
+                    into their existing systems.
+                  </p>
+                </div>
+              </div>
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-number">08</span>
+
+              <div class="faq-text">
+                <div class="faq__question" data-id="8">
+                  <span class="faq__question--text"
+                    >Can you help with website or app maintenance and
+                    updates?</span
+                  >
+                </div>
+                <div class="faq__answer" style="display: none">
+                  <p>
+                    Yes! SquareUp provides tools for website and app
+                    maintenance, including updates for payment processing,
+                    inventory management, and customer interactions. Businesses
+                    can integrate Square’s APIs with existing frameworks to
+                    ensure smooth functionality.
+                  </p>
+                </div>
+              </div>
+
+              <span class="faq-toggle">
+                <svg
+                  class="icon-minus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  style="display: none"
+                >
+                  <path
+                    d="M10.6766 8.87344C10.1786 8.37552 9.37136 8.37552 8.87344 8.87344C8.37552 9.37136 8.37552 10.1786 8.87344 10.6766L15.1969 17L8.87344 23.3234C8.37552 23.8214 8.37552 24.6286 8.87344 25.1266C9.37136 25.6245 10.1786 25.6245 10.6766 25.1266L17 18.8031L23.3234 25.1266C23.8214 25.6245 24.6286 25.6245 25.1266 25.1266C25.6245 24.6286 25.6245 23.8214 25.1266 23.3234L18.8031 17L25.1266 10.6766C25.6245 10.1786 25.6245 9.37136 25.1266 8.87344C24.6286 8.37552 23.8214 8.37552 23.3234 8.87344L17 15.1969L10.6766 8.87344Z"
+                    fill="white"
+                  ></path>
+                </svg>
+                <svg
+                  class="icon-plus"
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M23.75 14.25H16.25V6.75C16.25 6.41848 16.1183 6.10054 15.8839 5.86612C15.6495 5.6317 15.3315 5.5 15 5.5C14.6685 5.5 14.3505 5.6317 14.1161 5.86612C13.8817 6.10054 13.75 6.41848 13.75 6.75V14.25H6.25C5.91848 14.25 5.60054 14.3817 5.36612 14.6161C5.1317 14.8505 5 15.1685 5 15.5C5 15.8315 5.1317 16.1495 5.36612 16.3839C5.60054 16.6183 5.91848 16.75 6.25 16.75H13.75V24.25C13.75 24.5815 13.8817 24.8995 14.1161 25.1339C14.3505 25.3683 14.6685 25.5 15 25.5C15.3315 25.5 15.6495 25.3683 15.8839 25.1339C16.1183 24.8995 16.25 24.5815 16.25 24.25V16.75H23.75C24.0815 16.75 24.3995 16.6183 24.6339 16.3839C24.8683 16.1495 25 15.8315 25 15.5C25 15.1685 24.8683 14.8505 24.6339 14.6161C24.3995 14.3817 24.0815 14.25 23.75 14.25Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section Project mr-t-md">
+        <div class="section__media media-5">
           <div class="heading-block">
             <a href="#" class="logo">
               <img src="./assets/images/header/logo2.svg" alt="SquareUp" />
@@ -431,10 +866,10 @@
             <h2 class="heading-block__title">
               Thank you for your Interest in SquareUp.
             </h2>
-            <p class="heading-block__description description-1">
+            <p class="heading-block__description">
               We would love to hear from you and discuss how we can help bring
-              your digital ideas to life. Here are the different ways<br />
-              you can get in touch with us.
+              your digital ideas to life. Here are the different ways you can
+              get in touch with us.
             </p>
             <a href="/Start Project" class="btn Project">Start Project</a>
           </div>
@@ -572,15 +1007,17 @@
         <div class="social">
           <div class="Connected">
             <p>Stay Connected</p>
-            <a href="#" class="social__item">
-              <img src="./assets/images/Icon/Icon8.svg" alt="Icon" />
-            </a>
-            <a href="#" class="social__item">
-              <img src="./assets/images/Icon/Icon9.svg" alt="Icon" />
-            </a>
-            <a href="#" class="social__item">
-              <img src="./assets/images/Icon/Icon10.svg" alt="Icon" />
-            </a>
+            <div class="icon_сonnected">
+              <a href="#" class="social__item">
+                <img src="./assets/images/Icon/Icon8.svg" alt="Icon" />
+              </a>
+              <a href="#" class="social__item">
+                <img src="./assets/images/Icon/Icon9.svg" alt="Icon" />
+              </a>
+              <a href="#" class="social__item">
+                <img src="./assets/images/Icon/Icon10.svg" alt="Icon" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -609,9 +1046,9 @@
           </div>
         </div>
         <div class="copyright">
-          &copy;
+          &copy;&nbsp;
           <span class="year"></span>
-          SquareUp. All rights reserved.
+          &nbsp;SquareUp. All rights reserved.
         </div>
       </div>
     </footer>
@@ -758,6 +1195,57 @@
         ? headerMenu.classList.remove("active")
         : null;
       document.body.style.overflow = "auto";
+    });
+
+    const currentYear = new Date().getFullYear();
+    document.querySelector(".year").textContent = currentYear;
+
+    /*const contactForm = document.querySelector(".contact .contact-form");
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+
+      fetch("https://webhook.site/e1aa0000-c106-42a3-8da1-6cf9056bd6d1", {
+        method: "POST",
+        body: formData,
+      });
+    });*/
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".faq-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const faqItem = toggle.closest(".faq-item");
+          const answer = faqItem.querySelector(".faq__answer");
+          const plusIcon = toggle.querySelector(".icon-plus");
+          const minusIcon = toggle.querySelector(".icon-minus");
+          const isOpen = faqItem.classList.contains("open");
+
+          if (isOpen) {
+            faqItem.classList.remove("open");
+            answer.style.display = "none";
+            plusIcon.style.display = "inline";
+            minusIcon.style.display = "none";
+          } else {
+            faqItem.classList.add("open");
+            answer.style.display = "block";
+            plusIcon.style.display = "none";
+            minusIcon.style.display = "inline";
+          }
+        });
+      });
+
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const plus = item.querySelector(".icon-plus");
+        const minus = item.querySelector(".icon-minus");
+        const answer = item.querySelector(".faq__answer");
+
+        item.classList.remove("open");
+        answer.style.display = "none";
+        plus.style.display = "inline";
+        minus.style.display = "none";
+      });
     });
   </script>
 </html>

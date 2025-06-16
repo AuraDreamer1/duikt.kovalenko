@@ -541,6 +541,7 @@ input,
       --btn-base-text-color: var(--color-white);
       --btn-hover-background-color: var(--color-white, #fff);
       --btn-hover-color: var(--color-black, #000);
+      align-items: center;
       justify-content: center;
       max-width: 432px;
       width: 100%;
@@ -572,6 +573,7 @@ input,
       padding-block: 18px;
       width: 145px;
       height: 63px;
+      cursor: pointer;
     }
   }
   .close-btn {
